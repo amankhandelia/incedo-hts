@@ -56,6 +56,8 @@ class RevisionMethod(object):
                                        mse=mse)
 
         elif self.name == MethodsT.BU.name:
+            print("Name:::" + str(self.name))
+            print(list(forecasts.keys()))
             y_hat = self._y_hat_matrix(forecasts)
             return self._new_mat(y_hat)
 
