@@ -1,4 +1,4 @@
-from hts.core.regressor import HTSRegressor
+from core.regressor import HTSRegressor
 from hts.revision import RevisionMethod
 
 __author__ = """Carlo Mazzaferro"""
