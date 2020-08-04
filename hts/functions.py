@@ -60,9 +60,11 @@ def project(hat_mat: np.ndarray, sum_mat: np.ndarray, optimal_mat: np.ndarray) -
 
 def y_hat_matrix(forecasts, keys=None):
     if not keys:
-        keys = forecasts.keys()
+        keys = list(forecasts.keys())
     first = list(forecasts.keys())[0]
     y_hat_mat = np.zeros([len(forecasts[first].yhat), 1])
+    print("forecasts:::::")
+    print(keys)
     for key in keys:
         f1 = np.array(forecasts[key].yhat)
         f2 = f1[:, np.newaxis]

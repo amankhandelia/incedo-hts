@@ -26,6 +26,8 @@ class RevisionMethod(object):
     def _y_hat_matrix(self, forecasts):
         n_cols = len(list(forecasts.keys())) + 1
         keys = range(n_cols - self.sum_mat.shape[1] - 1, n_cols - 1)
+        if self.name == MethodsT.BU.name:
+            keys = list(forecasts.keys())[3:]
         return y_hat_matrix(forecasts, keys=keys)
 
     def revise(self, forecasts=None, mse=None, nodes=None):
