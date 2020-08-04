@@ -47,3 +47,8 @@ History
 * Added support for no revision, thanks @ryanvolpi
 * Added multiple example at https://github.com/carlomazzaferro/scikit-hts-examples, thanks @vtoliveira
 * Logging fixes and usability improvements
+
+0.5.3 (2020-08-03)
+------------------
+
+* Fixed BU Key error

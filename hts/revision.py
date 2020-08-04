@@ -28,6 +28,8 @@ class RevisionMethod(object):
         keys = range(n_cols - self.sum_mat.shape[1] - 1, n_cols - 1)
         if self.name == MethodsT.BU.name:
             keys = list(forecasts.keys())[3:]
+            print("Keys here..")
+            print(keys)
         return y_hat_matrix(forecasts, keys=keys)
 
     def revise(self, forecasts=None, mse=None, nodes=None):
